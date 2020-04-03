@@ -21,7 +21,6 @@ def getsongavailable(song):
         content=content.content.decode()
         soup=BeautifulSoup(content,"lxml")
         soup=(soup.find("div",id="ajax-wrap"))
-        print(type(soup))
         soup=soup.findAll("div",class_="item-song ajax-item")
         for i in soup:
             soup=i.find("tr")
