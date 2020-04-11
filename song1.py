@@ -19,7 +19,7 @@ def getsongavailable(song):
         content=requests.get("https://en.muzmo.org/search?q="+"+".join(song.split()),headers={
                 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'})
         content=content.content.decode()
-        soup=BeautifulSoup(content,"lxml")
+        soup=BeautifulSoup(content,"html.parser")
         soup=(soup.find("div",id="ajax-wrap"))
         soup=soup.findAll("div",class_="item-song ajax-item")
         for i in soup:
