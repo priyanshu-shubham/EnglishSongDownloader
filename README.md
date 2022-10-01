@@ -1,5 +1,6 @@
 # EnglishSongDownloader
-This is a python script to download English Songs
+
+Download any song by running a python script.
 Requirements:
 1. Python 3.x
 2. Requests library
